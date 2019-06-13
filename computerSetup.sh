@@ -25,6 +25,7 @@ brew install wget
 brew install mackup
 brew install zsh
 brew install node@10
+echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.zshrc
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
