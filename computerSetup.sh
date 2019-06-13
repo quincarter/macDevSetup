@@ -8,10 +8,14 @@ sudo -u $currentUser defaults write com.apple.menuextra.battery ShowPercent YES
 sudo -u $currentUser killall SystemUIServer
 
 git clone https://github.com/kerma/defaultbrowser.git ~/Downloads/defaultbrowser && cd ~/Downloads/defaultbrowser && make && make install && cd ~/computerSetup.sh
+# Un comment if the keyboard config gets messed up. this will set the key repeat back to default.
+# defaults write NSGlobalDomain KeyRepeat -int 25 && defaults write NSGlobalDomain InitialKeyRepeat -int 6
 
+echo Installing Homebrew and Cask
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
 
 #Mac App Store Apps First
-mas install 803453959  # Slack
+brew cask install slack
 
 xcode-select --install
 
@@ -20,6 +24,8 @@ echo Install Homebrew packages
 brew install wget
 brew install mackup
 brew install zsh
+brew install node@10
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 brew install bash-completion
