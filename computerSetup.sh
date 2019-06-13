@@ -27,6 +27,8 @@ brew install zsh
 brew install node@10
 echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.zshrc
 
+brew install yarn --ignore-dependencies
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 brew install bash-completion
@@ -49,11 +51,21 @@ brew cask install sourcetree
 
 echo Install Some additional Apps
 brew cask install spotify
+brew cask install visual-studio-code
+
+echo Uncomment the \#\# tags to add vscode \`code\` command to the PATH if it isn\'t already available
+##cat << EOF >> ~/.bash_profile
+# Add Visual Studio Code (code)
+##export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+##EOF
 
 echo "Installing Google Chrome"
 brew cask install google-chrome
 defaultbrowser chrome 
 rm -rf defaultbrowser
+
+echo Configuring iTerm2 to have shell integration
+curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 
 # Install docker
 brew cask install docker       # Install Docker
@@ -75,4 +87,5 @@ echo Click Color Presets… at the bottom right
 echo Click Import…
 echo Select the material-design-colors.itermcolors file
 echo Select the material-design-colors from Load Presets…
+echo also be sure to change the default font to powerline fonts
 
