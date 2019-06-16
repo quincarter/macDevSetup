@@ -129,7 +129,7 @@ brew cask install docker       # Install Docker
 
 # Install Jetbrains Toolbox
 brew cask install jetbrains-toolbox
-
+open /Applications/Jetbrains\ Toolbox.app
 #########################################################################
 
 
