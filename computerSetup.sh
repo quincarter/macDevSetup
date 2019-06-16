@@ -122,7 +122,7 @@ echo Uncomment the \#\# tags to add vscode \`code\` command to the PATH if it is
 echo "Installing Google Chrome"
 brew cask install google-chrome
 defaultbrowser chrome 
-rm -rf defaultbrowser
+rm -rf ~/Downloads/defaultbrowser
 
 #########################################################################
 
