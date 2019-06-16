@@ -60,6 +60,11 @@ brew cask install java
 
 echo Installing SpectacleApp
 brew cask install spectacle
+echo Opening Spectacle -- Make sure to open at login
+#needs to be called twice to open the preferences pane
+open /Applications/Spectacle.app
+open /Applications/Spectacle.app
+
 #########################################################################
 
 
