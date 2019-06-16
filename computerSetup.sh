@@ -195,12 +195,7 @@ cd ~/computer_setup
 ######################## Running DockUtil ##############################
 ########################################################################
 echo Install DockUtil and run ./dockSetup.sh
-cd ~/Downloads
-wget https://github.com/downloads/kcrawford/dockutil/dockutil-1.1.2.pkg.dmg
-hdiutil attach dockutil-1.1.2.pkg.dmg
-sudo installer -pkg /Volumes/dockutil-1.1.2/dockutil-1.1.2.pkg -target /
-hdiutil detach /Volumes/dockutil-1.1.2/
-rm -rf dockutil-1.1.2.pkg.dmg
+brew install dockutil
 exec ~/computer_setup/dockSetup.sh
 
 ########################################################################
