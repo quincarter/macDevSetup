@@ -82,6 +82,21 @@ open https://github.com/kcrawford/dockutil/downloads
 cd Downloads
 curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
 
+#########################################################################
+#### Downloading Angular console and installing to /Applications ####
+echo Downloading Angular Console disk image
+wget https://github.com/nrwl/angular-console/releases/download/v8.0.0/AngularConsole-8.0.0.dmg
+
+echo Mounting Angular Console disk image to /Volumes/Angular Console 8.0.0
+hdiutil attach AngularConsole-8.0.0.dmg
+
+echo Copying Angular Console.app to the Applications directory
+cp -a /Volumes/Angular\ Console\ 8.0.0/Angular\ Console.app /Applications/Angular\ Console.app
+
+echo unmounting Angular Console
+hdiutil detach /Volumes/Angular\ Console\ 8.0.0/
+#########################################################################
+
 echo Go to iTerm2 > Preferences > Profiles > Colors Tab
 echo Click Color Presets… at the bottom right
 echo Click Import…
