@@ -132,9 +132,11 @@ rm -rf ~/Downloads/defaultbrowser
 #########################Dev Apps Continued##############################
 #########################################################################
 # Install docker
+echo Installing Docker for Mac
 brew cask install docker       # Install Docker
 
 # Install Jetbrains Toolbox
+echo Installing and opening Jetbrains Toolbox
 brew cask install jetbrains-toolbox
 open /Applications/Jetbrains\ Toolbox.app
 #########################################################################
