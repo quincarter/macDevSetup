@@ -58,11 +58,14 @@ curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
 echo Installing Java
 brew cask install java
 
+#########################################################################
+####################### Spectacle.app ###################################
+#########################################################################
 echo Installing SpectacleApp
 brew cask install spectacle
 echo Opening Spectacle -- Make sure to open at login
-#needs to be called twice to open the preferences pane
 open /Applications/Spectacle.app
+echo Adding Spectacle to Login Items
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Spectacle.app", hidden:true}'
 #########################################################################
 
