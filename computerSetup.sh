@@ -159,6 +159,8 @@ cp -a /Volumes/Angular\ Console\ 8.0.0/Angular\ Console.app /Applications/Angula
 echo unmounting Angular Console
 hdiutil detach /Volumes/Angular\ Console\ 8.0.0/
 
+echo Cleaning up disk image
+rm -rf AngularConsole-8.0.0.dmg
 #########################################################################
 
 
@@ -183,6 +185,7 @@ wget https://github.com/downloads/kcrawford/dockutil/dockutil-1.1.2.pkg.dmg
 hdiutil attach dockutil-1.1.2.pkg.dmg
 sudo installer -pkg /Volumes/dockutil-1.1.2/dockutil-1.1.2.pkg -target /
 hdiutil detach /Volumes/dockutil-1.1.2/
+rm -rf dockutil-1.1.2.pkg.dmg
 exec ~/computer_setup/dock_setup.sh
 
 ########################################################################

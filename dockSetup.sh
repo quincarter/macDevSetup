@@ -2,6 +2,7 @@
 
 dockutil --add /Applications/Docker.app
 dockutil --add /Applications/iTerm.app
+dockutil --add /Applications/Angular\ Console.app
 dockutil --add /Applications/Google\ Chrome.app
 dockutil --add /Applications/Jetbrains\ Toolbox.app
 dockutil --add /Applications/Spotify.app
