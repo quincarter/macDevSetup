@@ -12,7 +12,7 @@ currentUser=`ls -l /dev/console | cut -d " " -f4`
 echo Showing battery percentage
 sudo -u $currentUser defaults write com.apple.menuextra.battery ShowPercent YES
 
-echo Adding some system icons to the menu bar (Volume, Bluetooth, Displays)
+echo Adding some system icons to the menu bar Volume, Bluetooth, Displays
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu" "/System/Library/CoreServices/Menu Extras/Displays.menu"
 
 echo Resetting UI
@@ -93,7 +93,7 @@ brew cask install slack
 echo Installing Spotify
 brew cask install spotify
 
-echo Installing Google Backup and Sync (Formerly Google Drive)
+echo Installing Google Backup and Sync Formerly Google Drive
 brew cask install google-backup-and-sync
 #########################################################################
 
@@ -183,22 +183,23 @@ rm -rf AngularConsole-8.0.0.dmg
 #########################Generating SSH Keys#############################
 #########################################################################
 echo Generating SSH Key Pairs with default name as "macDevSetup"
+cd ~/.ssh/
 ssh-keygen -o -t rsa -b 4096 -C "macDevSetup"
-
+cd ~/computer_setup
 #########################################################################
 
 
 ########################################################################
 ######################## Running DockUtil ##############################
 ########################################################################
-echo Install DockUtil and run ./dock_setup.sh
+echo Install DockUtil and run ./dockSetup.sh
 cd ~/Downloads
 wget https://github.com/downloads/kcrawford/dockutil/dockutil-1.1.2.pkg.dmg
 hdiutil attach dockutil-1.1.2.pkg.dmg
 sudo installer -pkg /Volumes/dockutil-1.1.2/dockutil-1.1.2.pkg -target /
 hdiutil detach /Volumes/dockutil-1.1.2/
 rm -rf dockutil-1.1.2.pkg.dmg
-exec ~/computer_setup/dock_setup.sh
+exec ~/computer_setup/dockSetup.sh
 
 ########################################################################
 
