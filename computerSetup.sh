@@ -13,7 +13,7 @@ echo Showing battery percentage
 sudo -u $currentUser defaults write com.apple.menuextra.battery ShowPercent YES
 
 echo Adding some system icons to the menu bar Volume, Bluetooth, Displays
-defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu" "/System/Library/CoreServices/Menu Extras/Displays.menu"
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu" "/System/Library/CoreServices/Menu Extras/Displays.menu"
 
 echo Resetting UI
 sudo -u $currentUser killall SystemUIServer
