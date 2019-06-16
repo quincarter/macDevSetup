@@ -93,6 +93,8 @@ brew cask install slack
 echo Installing Spotify
 brew cask install spotify
 
+echo Installing Google Backup and Sync (Formerly Google Drive)
+brew cask install google-backup-and-sync
 #########################################################################
 
 
