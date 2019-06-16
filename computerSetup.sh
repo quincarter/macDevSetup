@@ -63,8 +63,7 @@ brew cask install spectacle
 echo Opening Spectacle -- Make sure to open at login
 #needs to be called twice to open the preferences pane
 open /Applications/Spectacle.app
-open /Applications/Spectacle.app
-
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Spectacle.app", hidden:true}'
 #########################################################################
 
 
