@@ -21,6 +21,32 @@ sudo -u $currentUser killall SystemUIServer
 echo Installing Xcode stuff for development -- git included in this
 xcode-select --install
 
+
+#########################################################################
+################### Setting up Global Git configs #######################
+#########################################################################
+echo Setting global git configs for your system...
+read -p 'What is your first and last name? ' fullName
+read -p 'What is your email address you would like to be recognized by when you do git commits? ' emailAddress
+echo
+
+echo Setting Global Git Config: "git config --global ... located at ~/.gitconfig"
+sudo git config --global user.name "$fullName"
+sudo git config --global user.email "$emailAddress"
+
+echo Setting System Git Config with sudo: "sudo git config --system ... located at /etc/gitconfig"
+sudo git config --system user.name "$fullName"
+sudo git config --system user.email "$emailAddress"
+
+echo "####################### Global Git Config ###############################"
+sudo git config --list --global
+echo "#########################################################################"
+
+echo "####################### System Git Config ###############################"
+sudo git config --list --system
+echo "#########################################################################"
+#########################################################################
+
 echo Cloning the Default Browser tool for later. Will be removed later.
 git clone https://github.com/kerma/defaultbrowser.git ~/Downloads/defaultbrowser && cd ~/Downloads/defaultbrowser && make && make install && cd ~/computer_setup
 # Un comment if the keyboard config gets messed up. this will set the key repeat back to default.
