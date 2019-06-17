@@ -161,6 +161,9 @@ curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/ma
 #########################################################################
 ######Downloading Angular console and installing to /Applications #######
 #########################################################################
+echo Installing Latest angular-cli
+npm i @angular/cli@latest -g
+
 echo Installing Angular Console
 brew cask install angular-console
 
