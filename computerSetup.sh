@@ -111,6 +111,9 @@ brew cask install virtualbox
 echo Installing SourceTree
 brew cask install sourcetree
 
+echo Installing Postman
+brew cask install postman
+
 echo Install Some additional Apps
 
 echo Installing Slack
