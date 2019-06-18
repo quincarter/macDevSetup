@@ -244,4 +244,7 @@ echo Select the material-design-colors.itermcolors file
 echo Select the material-design-colors from Load Presets…
 echo also be sure to change the default font to powerline fonts
 
+echo Opening iTerm for you...
+open /Applications/iTerm.app
+
 #########################################################################
