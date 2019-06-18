@@ -105,15 +105,69 @@ osascript -e 'tell application "System Events" to make login item at end with pr
 #############################Dev Apps####################################
 #########################################################################
 echo Install Dev Apps...
+
+#Installing VirtualBox
 echo Installing Virtualbox
 brew cask install virtualbox
 
+#Install SourceTree
 echo Installing SourceTree
 brew cask install sourcetree
 
+# Install Postman
 echo Installing Postman
 brew cask install postman
 
+# Install docker
+echo Installing Docker for Mac
+brew cask install docker       # Install Docker
+
+# Install Jetbrains Toolbox
+echo Installing and opening Jetbrains Toolbox
+brew cask install jetbrains-toolbox
+
+# Opening Jetbrains Toolbox So you can install apps inside the toolbox
+open /Applications/Jetbrains\ Toolbox.app
+
+
+#########################################################################
+
+
+
+#########################################################################
+######Downloading Angular console and installing to /Applications #######
+#########################################################################
+echo Installing Latest angular-cli
+npm i @angular/cli@latest -g --n
+
+echo Installing Angular Console
+brew cask install angular-console
+
+#########################################################################
+
+
+
+#########################################################################
+############################# VSCode ####################################
+#########################################################################
+echo Installing VSCode because you need a decent text editor other than TextEdit 
+brew cask install visual-studio-code
+
+echo Uncomment the \#\# tags to add vscode \`code\` command to the PATH if it isn\'t already available
+##cat << EOF >> ~/.bash_profile
+# Add Visual Studio Code (code)
+##export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+##EOF
+
+#########################################################################
+
+
+
+
+
+#########################################################################
+######################### Additional Apps ###############################
+#########################################################################
 echo Install Some additional Apps
 
 echo Installing Slack
@@ -131,21 +185,6 @@ brew cask install google-backup-and-sync
 
 
 #########################################################################
-##############################VSCode#####################################
-#########################################################################
-echo Installing VSCode because you need a decent text editor other than TextEdit 
-brew cask install visual-studio-code
-
-echo Uncomment the \#\# tags to add vscode \`code\` command to the PATH if it isn\'t already available
-##cat << EOF >> ~/.bash_profile
-# Add Visual Studio Code (code)
-##export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-##EOF
-
-#########################################################################
-
-
-#########################################################################
 ###################Google Chrome - Set as Default browser################
 #########################################################################
 echo "Installing Google Chrome"
@@ -158,21 +197,6 @@ rm -rf ~/Downloads/defaultbrowser
 
 
 #########################################################################
-#########################Dev Apps Continued##############################
-#########################################################################
-# Install docker
-echo Installing Docker for Mac
-brew cask install docker       # Install Docker
-
-# Install Jetbrains Toolbox
-echo Installing and opening Jetbrains Toolbox
-brew cask install jetbrains-toolbox
-open /Applications/Jetbrains\ Toolbox.app
-#########################################################################
-
-
-
-#########################################################################
 ###############################Cleanup###################################
 #########################################################################
 brew cleanup --prune
@@ -180,21 +204,6 @@ brew cleanup --prune
 
 cd Downloads
 curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
-
-#########################################################################
-
-
-
-
-
-#########################################################################
-######Downloading Angular console and installing to /Applications #######
-#########################################################################
-echo Installing Latest angular-cli
-npm i @angular/cli@latest -g --n
-
-echo Installing Angular Console
-brew cask install angular-console
 
 #########################################################################
 
