@@ -143,6 +143,8 @@ npm i @angular/cli@latest -g --n
 echo Installing Angular Console
 brew cask install angular-console
 
+echo Installing NestJS for Node and TypeScript API Development
+npm i -g @nestjs/cli
 #########################################################################
 
 
