@@ -129,7 +129,9 @@ brew cask install jetbrains-toolbox
 # Opening Jetbrains Toolbox So you can install apps inside the toolbox
 open /Applications/Jetbrains\ Toolbox.app
 
-
+# Installing DBKoda - MongoDB Yoda Tool
+echo installing DBKoda so you can develop MongoDB Like Yoda
+brew cask install dbkoda
 #########################################################################
 
 
