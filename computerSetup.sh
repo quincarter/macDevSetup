@@ -109,6 +109,8 @@ echo Install Dev Apps...
 #Installing VirtualBox
 echo Installing Virtualbox
 brew cask install virtualbox
+echo NOTE - IF VIRTUALBOX THROWS ERRORS, UNINSTALL IT. THEN CHECK SECURITY AND PRIVACY AND ALLOW THE INSTALL TO HAPPEN
+
 
 #Install SourceTree
 echo Installing SourceTree
@@ -121,6 +123,10 @@ brew cask install postman
 # Install docker
 echo Installing Docker for Mac
 brew cask install docker       # Install Docker
+
+# Installing MongoDB So it is availble on the PATH
+echo Installing MongoDB So it is available on the PATH
+brew install mongodb
 
 # Install Jetbrains Toolbox
 echo Installing and opening Jetbrains Toolbox
